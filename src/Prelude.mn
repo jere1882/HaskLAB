@@ -1,0 +1,67 @@
+--FUNCIONES CONOCIDAS
+def sinc(x) = sin x / x  --plot sinc -100 100 0.001
+def exp(x) = e**x
+def sqrt(x) = x**0.5
+def log_dos (x) = log x / log 2
+def sec(x) = 1/cos(x)
+
+--TRIGONOMETRÍCAS
+def whh(x) = sin (cos x)
+def jere(x) = sen x + cos x
+def lin(x) = x * sin x - 1
+
+--GRÁFICAS CURIOSAS 
+def zeta(x) = (2*x*sin(2*x)+cos(2*x)-1)/(2*x) --plot zeta -10 10 0.001, plot zeta -100 100 0.01
+def gaussian(x) = 1 / ( 0.40 * ( 2 * pi )**(1/2) ) * e**(-1/2 * (x/0.40)**2 )
+def gaussian'(x) = 1 / ( 0.60 * ( 2 * pi )**(1/2) ) * e**(-1/2 * (x/0.60)**2 )
+def gaussian''(x) = 1 / ( 0.80 * ( 2 * pi )**(1/2) ) * e**(-1/2 * (x/0.80)**2 )
+def gaussian(x) = 1 / (2*pi*0.40**2)**0.5 * e ** (-x**2/2*0.40**2) -- plot [gaussian,gaussiann,gaussiannn] -10 10 0.001
+def gaussiann(x) = 1 / (2*pi*0.60**2)**0.5 * e ** (-x**2/2*0.60**2)
+def gaussiannn(x) = 1 / (2*pi*0.80**2)**0.5 * e ** (-x**2/2*0.80**2)
+def  mmr(x) = sin(e**x) -- plot mmr -5 5 0.001
+def wh(x) = cos ( x^3 - 6*x^2 + 4*x + 12) --plot wh -4 5 0.001 
+def bows(x) =wh(x)/(x*sen x*ln (ln x)) 
+-- tiene dominio [1,+OO] plot bows 1 2.6 0.0001
+-- para valores apenas mas grandes se va al infinito
+def trig(x) = - cosh x - senh x + cos x + sen x 
+--tiene raiz en 0 y cerca de -4 plotear entre -5 y 2 por ejemplo
+--trig tiene una grafica muy rara! plot trig -100 5 0.01 
+               
+def wo(x) = cos x + x  -- plot wo -50 50 0.01
+def ta(x) = tan(x) -- la gráfica sale horrible por las discontinuidades. ilustra las limitaciones del plotter
+def superpol(x) = x**5 - 8 * x **3 + 10 * x + 6 --plot superpol -3 3 0.001
+def rarisima(x) = (x**2 + 1)/x  -- plot rarisima 0.2 10 0.001
+def yy'(x) = (1/x)**x  --def yy(x) = 2**x
+def ndi(x) = (cos x)**x  --plot ndi -1 12 0.001
+def uso_sinc(x) = sinc (cos x)
+
+--PARA TESTEAR EL PARSER
+def const(x) = e
+def pow(x) = e**x + e**(1/x) -- es discontinua y los plots no son lindos
+def iuu(x) = - (25 - x **2)**(0.5)
+def cc(x) = 4/(9*x**0.25)
+def ccc(x) = 4/(9*x**(1/4))
+def horr(x) = cos x + log x - 1/(e*x) 
+def rara(x) = acos x / asin x -- plotear en -0.25, 0.25
+def taa(x) = tan(tan(x))
+def if(x) =tan(pi/2)
+def pi'(x) = pi  
+def apro(x) = x**(-1/2) * (2*pi)**(-(x+1/2))
+def cuad(x) = -x**2 +1
+def fy(x) = (x-2)/(x-3)
+def poli(x) = 5*x**2 + 2*x + 7
+def polii(x) = x**2 - 5*x - 14
+def rac(x) = poli(x)/polii(x) --plot rac -10 10 0.01
+def yy(x) = 2**x
+
+
+--DIFERENTES INTERPOLACIONES
+def fs(x) = 800*x/(3+54*x**4+x**2)
+--chebyshev fs 5
+--def chans(x) = ans(x)
+--interpolacion_newton f [-1,-0.6,-0.2,0.2,0.6,1]
+--def nans(x) = ans (x)
+--plot [fs,chans,nans] -1 1 0.0001
+
+
+
