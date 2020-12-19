@@ -15,4 +15,4 @@ Features:
 - Functions can be defined interactively (in the console), or loaded from files.
 - A comprehensive manual (in Spanish) is provided, along with a tutorial and examples.
 
-![Plots](https://ibb.co/VMfntZm)
+![Plots](https://i.ibb.co/1RFyL56/image.png)
